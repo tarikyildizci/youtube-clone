@@ -5,7 +5,11 @@ import {
 } from 'components/Sidebar/SidebarItem'
 import React, { PropsWithChildren } from 'react'
 import { WithId } from 'utils/types'
-import { SidebarContainerStyled, SidebarSectionStyled } from './Sidebar.style'
+import {
+    SidebarContainerStyled,
+    SidebarSectionHeaderStyled,
+    SidebarSectionStyled,
+} from './Sidebar.style'
 
 export type SidebarSectionProps = {
     header?: string
@@ -17,7 +21,9 @@ export const SidebarSection: React.FC<
     PropsWithChildren<SidebarSectionProps>
 > = ({ children, header }) => (
     <SidebarSectionStyled direction="column" wrap>
-        {header}
+        {header && (
+            <SidebarSectionHeaderStyled>{header}</SidebarSectionHeaderStyled>
+        )}
         {children}
     </SidebarSectionStyled>
 )

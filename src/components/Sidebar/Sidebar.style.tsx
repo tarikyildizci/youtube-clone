@@ -38,6 +38,7 @@ export const SidebarItemContentStyled = styled((props: FlexProps) => (
     height: 100%;
     border-radius: 10px;
     padding: 0 12px;
+    font-size: 0.875rem;
     &:hover {
         background-color: rgb(255 255 255 / 10%); //C!!
     }
@@ -57,4 +58,14 @@ export const SidebarDividerStyled = styled.div`
     height: 1px;
     background-color: rgb(255 255 255 / 10%); //C!!
     margin: 12px 0;
+`
+export const SidebarSectionHeaderStyled = styled.p`
+    text-transform: none;
+    letter-spacing: unset;
+    padding: 6px 12px 4px;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    color: #f1f1f1; //C!!
 `
